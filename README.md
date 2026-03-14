@@ -1,0 +1,1 @@
+This is a class note for ATMS 507 at UIUC! see introduction for more info about this notebook.
