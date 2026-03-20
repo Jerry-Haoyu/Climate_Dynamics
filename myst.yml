@@ -16,8 +16,8 @@ project:
     - file: introduction.md
     - title: Atomosphere Modeling
       children:
-        - file: atomosphere_modeling/enery_balance_model.md
         - file: atomosphere_modeling/radiative_convective_model.md
+        - file: atomosphere_modeling/enery_balance_model.md
         - file: atomosphere_modeling/hydrological_cycle.md
     - title: Homework
       children:
