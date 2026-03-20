@@ -6,7 +6,7 @@ kernelspec:
 
 # Energy Balance Model 
 
-## Heat Equation In Spherical Coordinate 
+## 1D Heat Equation Model
 The basic idea behind the **energy balance model** is to take account of transport between different latitude. A model that totally disregard such transport would result in unrealistic temperature distribution due to differential heating. For example,region with latitude not in $[-30,30]$ would be at $0K$ since they have *radiation energy deficit*. 
 
 
@@ -20,7 +20,7 @@ Radiation Energy Budget
 
 We can discretize the earth to bands at different latitude as [below](#latdis):
 :::{tip}
-Run the cell to get an interactive plot where you can change the resolution and perspective!
+Run the cell to get an interactive plot explaining the discretization where you can change the resolution and perspective!
 
 *Note* Normally it should take about 45s for the kernel to build, if it takes <5s then it means the build is not 
 succesful, refresh the page and click the start button again.
@@ -97,24 +97,20 @@ $$
 where 
 - $C(\phi)$ is constant pressure heat capacity at some latittude $\phi$
 
-which is a standard 1D heat equation.
+which is a standard 1D heat equation where $T$ is a function of latitude $\phi$ and temperatre $T$.
 
-An idealized model for $ASR$, $OLR$ woud give
 
-:::{prf:proposition}
-$$
-\begin{equation}
-    C(\phi) \frac{\partial T_s}{\partial t} = (1-\alpha)Q(\phi)- (A+BT_s) + \frac{D}{\cos \phi}\frac{\partial }{\partial \phi}\left(\cos \phi \frac{\partial T_s}{\partial \phi}\right)
-\end{equation}
-$$
-:::
+
+
+## Solving The Heat Equation
+
+We first need to write $ASR$ and $OLR$ explicitly as a function of $(T, \phi)$.
+
 
 
 ### Effects of heat capacity 
 
 Heat capacity $C(\phi)$ is affected by, for instance, the depth we are at. With a taller column of water, we get a larger heat resovoir so reasonably we get higher $C(\phi)$. 
+
 ![](image/1d_ebm_seasonal_variation.png)
 
-### Importance of advection 
-
-![](image/effect_of_diffusivity.png)
