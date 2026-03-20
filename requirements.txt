@@ -3,6 +3,12 @@ numpy
 scipy 
 seaborn
 
+ipykernel
+
+os
+sys
+contextlib
+
 jupyterlab==4.1.5
 matplotlib==3.8.4
 ipywidgets==8.1.2
