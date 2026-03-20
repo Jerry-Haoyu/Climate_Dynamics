@@ -35,7 +35,7 @@ Evaluating the integral:
 \iint_D S_0|\cos(\phi)|\sin(\phi)r^2 d\phi d\theta  &= S_0r^2\pi \int_{0}^{\pi} \sin\phi |\cos\phi |d\phi \\
 &= S_0r^2\pi 2 \int_{0}^{\pi/2} \sin\phi \cos\phi d\phi \\
 &= S_0r^2\pi \int_{0}^{\pi/2} \sin(2\phi) d\phi \\
-&= S_0r^2\pi [-\cos2\phi/2]_0^{\pi/2} \\
+&= S_0r^2\pi [-\cos2\phi]_0^{\pi/2} \\
 &= S_0r^2\pi 
 \end{align*}
 Next adjust for the *planetary albedo* and we get the desired result. 
