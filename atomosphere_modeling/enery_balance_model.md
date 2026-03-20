@@ -29,7 +29,7 @@ succesful, refresh the page and click the start button again.
 
 :::
 ```{code-cell} Latitude Discretization
-:tag: [remove-input, remove-stdout,remove-stderr]
+:tag: [hide-input, remove-stdout,remove-stderr]
 :label: latdis
 
 import contextlib
