@@ -4,7 +4,7 @@
 
 :::{figure} _static/site_logo_light.png
 :width: 200%
-Theme Figure [^tf]
+Cover Figure [^tf]
 :::
 ---
 ## Introduction 
@@ -40,9 +40,9 @@ This is just a lecture note by a student who is a total beginer in climate scien
 Therefore mistakes should be expected among every rendered equation/sentence. I would greatly appreciate reporting mistakes via `github` or my email `hytang2@illinois.edu`. 
 :::
 
-## AI 
+## AI-Free Disclaimer
 I'm a believer of the idea that AI brings huge cognitive debt and cumbers the learning process. This notebook is hence created AI free(however, conceptual consulting is quite frequent, they are truely valuable resource too when it comes to learning, contradictoraily). In particular, code snippets is absolutely AI-free.
 
-[^fl]: My mother tongue is [**Wu-Chinese**](https://zh.wikipedia.org/zh-tw/%E8%AF%B8%E6%9A%A8%E8%AF%9D)(**枫桥话**-吴语临绍小片) and **Madarin**(**普通话**)
+[^fl]: My mother tongue is [**Wu Chinese(ISO639-3 : wuu)**](https://zh.wikipedia.org/zh-tw/%E8%AF%B8%E6%9A%A8%E8%AF%9D)(**枫桥话**-吴语临绍小片) and **Madarin**(**普通话**)
 
 [^tf]: The figure, which I created in pages, aims to represent a GCM. I'm trying to do some data-driven appraoch to come up with a toy GCM, supervised by Professor Gan. However things are just starting and the project is likely too ambitious. 
