@@ -1,15 +1,14 @@
 pandas 
 numpy 
 scipy 
-matplotlib 
 seaborn
-ipympl
-ipywidgets
-jupyterlab
+
+jupyterlab>=4,<5
+matplotlib>=3.8
+ipywidgets>=8
+ipympl>=0.9
+
 ipyleaflet
-# Critical for widget support in JupyterLab 4
 jupyterlab_widgets
 widgetsnbextension
-
-# Often needed for MyST / Jupyter Book environments
 notebook
