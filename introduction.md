@@ -2,8 +2,10 @@
 
 ---
 
-![](_static/site_logo_light.png)[^tf]
-
+:::{figure} _static/site_logo_light.png
+:width: 200%
+Theme Figure [^tf]
+:::
 ---
 ## Introduction 
 
