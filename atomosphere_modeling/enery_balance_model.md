@@ -18,7 +18,7 @@ Radiation Energy Budget
 
 
 
-We can discretize the earth to bands at different latitude as [below](latdis):
+We can discretize the earth to bands at different latitude as [below](#latdis):
 :::{tip}
 Run the cell to get an interactive plot where you can change the resolution and perspective!
 
@@ -29,10 +29,18 @@ succesful, refresh the page and click the start button again.
 
 :::
 ```{code-cell} Latitude Discretization
-:tag: [remove-input,remove-stdout,remove-stderr]
+:tag: [hide-input, remove-stdout,remove-stderr]
 :label: latdis
-%pip install ipympl
-%matplotlib ipympl
+
+import contextlib
+import os
+
+#to redirect stdout when using the line magic command to install and invoke the interactive backend ipympl 
+with open(os.devnull, 'w') as devnull:
+    with contextlib.redirect_stdout(devnull):
+        %pip install ipympl
+        %matplotlib ipympl
+
 import matplotlib.pyplot as plt
 import ipywidgets as wdgt
 import numpy as np
