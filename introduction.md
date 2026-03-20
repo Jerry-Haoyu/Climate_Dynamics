@@ -1,6 +1,7 @@
 # Climate Dynamics 
 
 ![](_static/site_logo_light.png)[^tf]
+
 ## Introduction 
 
 
