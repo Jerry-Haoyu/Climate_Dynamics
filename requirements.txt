@@ -6,5 +6,10 @@ seaborn
 ipympl
 ipywidgets
 jupyterlab
-
 ipyleaflet
+# Critical for widget support in JupyterLab 4
+jupyterlab_widgets
+widgetsnbextension
+
+# Often needed for MyST / Jupyter Book environments
+notebook
