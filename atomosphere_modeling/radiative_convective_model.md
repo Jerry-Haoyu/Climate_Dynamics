@@ -74,4 +74,10 @@ The rest is just direct arithmetic.
 🧐 ： hmmmm \
 😱 ：  That's WAY too cold! 
 :::
+
+## Iteration 2: Single Layer Atomsphere
+
+
+
+
 [^sm]: Syukuro Manabe is one of the first climate scientist who sucessfully modelled the climate system using computer-aided numerical simulation. He is one of the 2021 Nobel Physics Winner due to his work in climate modelling. **A fun fact of this grand master from Professor Gan** : he is one of the climate scientist who was rigorously educated  at University of Tokyo, however, who chose to immigrate to the U.S after WWII. I felt this fact to be vastly interesting and relevant under the current geopolitial context for controversial reasons. Here is a link to a socioeconomic study [Exodus of Meoeorolgists from University of Tokyo](https://journals.ametsoc.org/view/journals/bams/74/7/1520-0477_1993_074_1351_mftuot_2_0_co_2.xml).

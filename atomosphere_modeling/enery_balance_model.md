@@ -4,7 +4,12 @@ kernelspec:
   display_name: 'Python 3'
 ---
 
+
 # Energy Balance Model 
+:::
+Edit Log:
+Last update : 2026/3/20
+:::
 
 ## 1D Heat Equation Model
 The basic idea behind the **energy balance model** is to take account of transport between different latitude. A model that totally disregard such transport would result in unrealistic temperature distribution due to differential heating. For example,region with latitude not in $[-30,30]$ would be at $0K$ since they have *radiation energy deficit*. 
@@ -154,25 +159,3 @@ However for now let's model a simple **aquaplanet** at the surface so we set
 $$
 C = 4\left(\frac{kJ}{kg \cdot K}\right)
 $$
-
-### Semi-Discrete Finite Difference Scheme
-Let's rewrite the equation cleanly:
-:::{note} Model Description
-$$
-T_t = \frac{S_0|\cos\phi| + \sigma T^4 }{C}-\frac{D}{C}\tan\phi T_{\phi}+ D T_{\phi\phi}  
-$$
-We can use a uniform initial condition and wait for the aquaplanent to be heated up gradually: 
-$$
-T(0,\phi) = 0K
-$$
-Also, we impose **Neumann conditions** at the boundaries, that is, the poles where no heat can can flow through[^nbc]. 
-
-$$
-T_{\phi}(t,\phi) = 0, \phi\in \{0, \pi\}
-$$
-:::
-
-Now that we reduced a physical situation to a standard PDE with proper initial and boundary conditions, we are ready to *simulate*! That is, to numerically solve the equation. 
-
-
-[^nbc]: Technically we can flow through the pole, however, as all trajectories converge to a single point(which is measure-zero), there is essentially no area for the heat to diffuse through even though temperature difference exists.
