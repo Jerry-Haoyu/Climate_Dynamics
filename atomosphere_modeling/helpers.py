@@ -1,6 +1,5 @@
 import numpy as np 
-from IPython.display import display, Math
-import sympy as sp
+import tqdm
 import matplotlib.pyplot as plt 
 import matplotlib.animation as animation
 
@@ -12,8 +11,6 @@ def shift_numpy_array(array : np.ndarray, step : int):
         array = np.pad(array[step : len(array)], pad_width=(0, step), constant_values=0)
     return array 
 
-def latex_print(A):
-    display(Math(sp.latex(sp.Matrix(A.tolist()))))
     
 def animate1dPDEsolution(solution : np.ndarray, 
                          spatial_discretization,
@@ -42,6 +39,12 @@ def animate1dPDEsolution(solution : np.ndarray,
     min = np.min(solution[~np.isnan(solution)])
     ax.set_ylim(ymin=min)
     ax.set_ylim(ymax=max)
+    ax.set_yticks(np.arange(int(min), int(max), 10))
+    ax.set_yticklabels(np.arange(int(min), int(max), 10))
+    
+    total_frames = int(len(solution) / coarsen_factor)
+    
+    pbar = tqdm.tqdm(total=total_frames)
     
     u = solution[0]
     sol_curr = ax.plot(spatial_discretization, u)[0]
@@ -52,9 +55,10 @@ def animate1dPDEsolution(solution : np.ndarray,
         sol_curr.set_ydata(solution[t * coarsen_factor])
         time = (int)(t * coarsen_factor * time_factor)
         ax.set_title(f"1D {title} at Time {time} {t_unit}")
+        pbar.update(1)
         return (sol_curr, )
 
-    anim = animation.FuncAnimation(fig = fig, func=update, frames=int(len(solution) / coarsen_factor), interval=30)
+    anim = animation.FuncAnimation(fig = fig, func=update, frames=total_frames, interval=30)
     anim.save(filename=output_path, fps=fps)
 
    
