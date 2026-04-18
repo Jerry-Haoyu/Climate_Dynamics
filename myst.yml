@@ -26,10 +26,15 @@ project:
     - title: Ocean Modeling
       children:
         - file: ocean_modeling/wind_driven_circulation.md
+        - file: ocean_modeling/atmosphere_ocean_coupling.md
+    - title: ENSO 
+      children:
+        - file: enso/introduction.md
     - title: Homework
       children:
         - file: homework/hw4/hw4.ipynb
         - file: homework/hw5/hw5.ipynb
+        - file: homework/hw6/hw6.ipynb
     
 
     
