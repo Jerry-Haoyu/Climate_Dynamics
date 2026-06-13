@@ -211,12 +211,6 @@ $$
 $$
 We can let our deisred $\mathbf{A}=\mathbf{B}+\nabla g$ for some scalar function $g$. Now, the desired relationship is:
 $$
-\partial_z (B_y + \partial_y g) &= 0\\
-\partial_z (B_x + \partial_x g) &= 0 \\
-\partial_x (B_y + \partial_y g) &= \partial_y (B_x + \partial_x g)
-$$
-A sufficient condition would be:
-$$
 B_y &= -\partial_y g \\
 B_x &= -\partial_x g \\
 $$
@@ -228,7 +222,7 @@ The condition for solution to exists is:
 $$
 \partial_x B_y = \partial_y B_x
 $$
-But this is equivalent to $w=\partial_x B_y - \partial_y B_x=0$. Now we let $\mathbf{A}=(0,0,\psi)$ and we are done.
+But this is equivalent to $w=\partial_x B_y - \partial_y B_x=0$. Now we let $\mathbf{A}=\mathbf{B}+g$ , $\psi = \mathbf k \cdot \mathbf{A}$ and we are done.
 :::
 We're now read to show *Stommel's model*:
 :::{prf:proof}
