@@ -75,7 +75,79 @@ The rest is just direct arithmetic.
 😱 ：  That's WAY too cold! 
 :::
 
-## Iteration 2: Single Layer Atomsphere
+## Iteration 2: Single Layer Atomosphere
+
+:::{figure} image/1-layer_blanket.png
+
+:::
+
+If we add a single layer atomosphere, the control equations now become:
+
+$$
+\begin{cases}
+\sigma T_s^4 &= 2 \sigma T_A^4  \\
+\sigma (T_e^4 + T_A^4) &= \sigma T_s^4 
+\end{cases}
+$$
+
+- $\sigma T_e^4 = \frac{S_0}{4}(1-\alpha)$ where $T_e$ is the "averaged earth temperatrue" in the first iteration
+- the first equation describes the **flux at the atomosphere**, the atomosphere is assumed to be transparted to short-wave radiation hence the only in-come radiaiton is the OLR from the surface. The R.H.S is the out-going flux; 
+- the second equation describes th **flux at the surface**. 
+
+Solving both we get:
+
+$$
+T_A = T_e = 255K \\
+T_s = 2^{1/4}T_e=303K
+$$
+
+
+## Iteration 3: Multi-layer Atomosphere With Partial Absorbing 
+
+:::{figure} image/multi_layer_blanket.png
+Multi-layered Blanket Model 
+:::
+
+We can just straight up add more layers to achieve a better approximation of the "continum". However, numerically speaking, we can think the above as the finite-difference scheme for the system:
+
+:::{prf:proposition}
+Let $\tau$ be the *optical depth* with $\tau=0$ being at the top of the atomosphere and increase downward. Let $U(\tau), D(\tau)$ being the upward and downward flux respectively. It follows:
+$$
+\begin{cases}
+\frac{dU}{d\tau} &= U(\tau) - B(\tau) \\
+\frac{dD}{d\tau} &= B(\tau) - D(\tau)
+\end{cases}
+$$
+where $B$ is the planck's function. This system of equation is known as *Schwarzschild's equation*.
+The numerical solution shows some of the important pattern:
+:::
+
+:::{figure} image/pure_radiative_diff.png
+
+:::
+
+However, there are three critical issues:
+
+1. The surface is too warm 
+2. The *lapse rate* $\frac{dT}{dp}$ is too high
+3. The stratosphere is too cold 
+## A Breif Digression About Bouyancy 
+:::{figure} image/BV_frequency.png
+:::
+:::{prf:proposition} Brunt-Väisälä frequency 
+The BV frequency $N$ can be computed from:
+$$
+N = \sqrt{\frac{dB}{dz}} = \sqrt{\frac{g}{C_p}\frac{dS}{dz}}
+$$
+for ideal gases.
+
+- If $dB/dz <0$ then $N$ is imaginary(parcel will rise, convection) hence no oscillation. This is the *unstable* state.
+- If $dB/dz = 0$ then $N=0$, parcel is fixed. This is the  *neutral* state. 
+- If $dB/dz >0$, we have postive $N$ hence oscilaation. This is the desired *stable* state.
+:::
+
+
+
 
 
 
